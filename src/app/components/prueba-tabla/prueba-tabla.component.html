@@ -1,0 +1,30 @@
+<p class="text-center text-gray-900 text-5xl mb-5">Prueba de tabla</p>
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-200 uppercase bg-gray-600">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-center">
+                    Producto
+                </th>
+                <th scope="col" class="px-6 py-3 text-center">
+                    Color
+                </th>
+                <th scope="col" class="px-6 py-3 text-center">
+                    Categoría
+                </th>
+                <th scope="col" class="px-6 py-3 text-center">
+                    Precio
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of productos" class="bg-white border-b hover:bg-gray-100">
+                <td class="px-6 py-4 font-medium text-gray-900 text-center">{{producto.nombre}}</td>
+                <td class="px-6 py-4 text-center">{{producto.color}}</td>
+                <td class="px-6 py-4 text-center">{{producto.categoria}}</td>
+                <td class="px-6 py-4 text-center">${{producto.precio}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
